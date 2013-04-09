@@ -1,4 +1,7 @@
 Revision history for Perl extension Math::simpleRNG
 
+0.02  Mon Apr  8 19:40:31 PDT 2013
+	added missing package name
+
 0.01  Mon Apr  8 19:00:14 PDT 2013
 	first release

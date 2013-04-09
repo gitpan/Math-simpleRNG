@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 #
-# package Math::simpleRNG;
+package Math::simpleRNG;
 #
 use strict;
 use vars qw($VERSION @ISA @EXPORT_OK);
@@ -9,7 +9,7 @@ require Exporter;
 @ISA = qw(Exporter);
 @EXPORT_OK = qw(sRNG);
 
-$VERSION = do { my @r = (q$Revision: 0.01 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 0.02 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 =head1 NAME
 
