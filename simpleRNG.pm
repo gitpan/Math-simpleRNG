@@ -9,7 +9,7 @@ require Exporter;
 @ISA = qw(Exporter);
 @EXPORT_OK = qw(sRNG);
 
-$VERSION = do { my @r = (q$Revision: 0.02 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 0.03 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 =head1 NAME
 
@@ -67,9 +67,10 @@ sub sRNG {
   } elsif (!$m_w) {
     $m_w = time();
   }
-  $m_z = 36969 * ($m_z & 65535) + ($m_z >> 16);
-  $m_w = 18000 * ($m_w & 65535) + ($m_w >> 16);
-  return ($m_z << 16) + $m_w;
+  $m_z = 36969 * ($m_z & 0xffff) + ($m_z >> 16);
+  $m_w = 18000 * ($m_w & 0xffff) + ($m_w >> 16);
+# 32 bit integer version of ((($m_z << 16) & 0xffffffff) + ($m_w & 0xffffffff)) & 0xffffffff;
+  (((($m_z & 0xffff) + ($m_w >> 16)) & 0xffff) << 16) + ($m_w & 0xffff);
 }
 
 =head1 AUTHOR
