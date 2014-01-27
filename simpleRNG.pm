@@ -9,7 +9,7 @@ require Exporter;
 @ISA = qw(Exporter);
 @EXPORT_OK = qw(sRNG);
 
-$VERSION = do { my @r = (q$Revision: 0.03 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
+$VERSION = do { my @r = (q$Revision: 0.04 $ =~ /\d+/g); sprintf "%d."."%02d" x $#r, @r };
 
 =head1 NAME
 
@@ -27,7 +27,7 @@ to produce uniformly distributed unsigned integers.
 
 =over 4
 
-=item * $random = sRNG('sead1','sead2')
+=item * $random = sRNG('seed1','seed2')
 
   input:	seed1	[optional]
 		seed2	[optional]
@@ -79,7 +79,7 @@ Michael Robinton <michael@bizsystems.com>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2013, Michael Robinton <michael@bizsystems.com>
+Copyright 2013-2014, Michael Robinton <michael@bizsystems.com>
 
 This module is licensed under the Code Project Open License (CPOL)
 a copy of which is included with this distribution. A copy may also be

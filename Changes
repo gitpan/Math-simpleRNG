@@ -1,5 +1,10 @@
 Revision history for Perl extension Math::simpleRNG
 
+0.04  Mon Jan 27 11:59:58 PST 2014
+        modify Makefile.PL to bypass missing 'pod2text'
+
+	documentation update
+
 0.03  Sat Apr 13 14:58:06 PDT 2013
 	made some adjustments so 64 bit platforms
 	generate the same sequences as 32 bit platforms

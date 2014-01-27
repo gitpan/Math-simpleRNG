@@ -9,7 +9,7 @@ DESCRIPTION
     This function uses George Marsaglia's Multiply With Carry algorithm to
     produce uniformly distributed unsigned integers.
 
-    * $random = sRNG('sead1','sead2')
+    * $random = sRNG('seed1','seed2')
           input:        seed1   [optional]
                         seed2   [optional]
 
@@ -31,7 +31,7 @@ AUTHOR
     Michael Robinton <michael@bizsystems.com>
 
 COPYRIGHT & LICENSE
-    Copyright 2013, Michael Robinton <michael@bizsystems.com>
+    Copyright 2013-2014, Michael Robinton <michael@bizsystems.com>
 
     This module is licensed under the Code Project Open License (CPOL) a
     copy of which is included with this distribution. A copy may also be
